@@ -1,8 +1,11 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Settings from "./lib/settings";
+import SomeButton from "./lib/someButton";
 
 export default function Home() {
   return (
+	  <Settings>
     <div className={styles.page}>
       <main className={styles.main}>
         <Image
@@ -18,6 +21,7 @@ export default function Home() {
             Get started by editing <code>app/page.tsx</code>.
           </li>
           <li>Save and see your changes instantly.</li>
+	  <li><SomeButton/></li>
         </ol>
 
         <div className={styles.ctas}>
@@ -91,5 +95,6 @@ export default function Home() {
         </a>
       </footer>
     </div>
+    </Settings>
   );
 }
